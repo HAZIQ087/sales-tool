@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Construction industry inspired color palette */
+    --background: 0 0% 99%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Construction Orange as primary */
+    --primary: 16 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 16 100% 55%;
+
+    /* Industrial Blue as secondary */
+    --secondary: 200 63% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 200 63% 37%;
+
+    /* Safety Yellow as accent */
+    --accent: 43 100% 70%;
+    --accent-foreground: 215 25% 15%;
+    --accent-hover: 43 100% 65%;
+
+    /* Professional grays */
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 16 100% 60%;
+
+    /* Construction themed gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(16 100% 60%), hsl(16 100% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 63% 42%), hsl(200 63% 37%));
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 98%));
+
+    /* Industrial shadows */
+    --shadow-soft: 0 2px 8px hsl(215 25% 15% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(215 25% 15% / 0.12);
+    --shadow-strong: 0 8px 32px hsl(215 25% 15% / 0.16);
+
+    /* Professional animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - Industrial theme */
+    --background: 215 28% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 28% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 28% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Keep construction orange in dark mode */
+    --primary: 16 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 16 100% 55%;
+
+    /* Darker blue for secondary */
+    --secondary: 200 63% 35%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 200 63% 30%;
+
+    /* Muted yellow in dark mode */
+    --accent: 43 100% 60%;
+    --accent-foreground: 215 28% 9%;
+    --accent-hover: 43 100% 55%;
+
+    --muted: 215 28% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 15%;
+    --input: 215 28% 15%;
+    --ring: 16 100% 60%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(16 100% 60%), hsl(16 100% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 63% 35%), hsl(200 63% 30%));
+    --gradient-surface: linear-gradient(180deg, hsl(215 28% 9%), hsl(215 28% 7%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
